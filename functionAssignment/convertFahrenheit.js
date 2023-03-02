@@ -17,10 +17,10 @@ steps:
 compute temp in celsius
  */
 
-function convertFahrenheit(tempInFahrenheit) {
+export function convertFahrenheit(tempInFahrenheit) {
 	const tempInCelsius = 5/9*(tempInFahrenheit - 32);
-	return tempInCelsius;
+	return +tempInCelsius.toFixed(4);
 
 }
 
-console.log(convertFahrenheit(100))
+// console.log(convertFahrenheit(100))

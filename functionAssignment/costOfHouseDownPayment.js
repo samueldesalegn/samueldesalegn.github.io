@@ -14,7 +14,7 @@ console.log("expect 7500: ", calcDownpayment(100000));
 console.log("expect 25000: ", calcDownpayment(250000));
 */
 
-function calcDownpayment(costOfHouse) {
+export function calcDownpayment(costOfHouse) {
 	let downpayment = 0;
 	if (costOfHouse < 50000) {
 		downpayment = 0.05*costOfHouse;
@@ -28,7 +28,7 @@ function calcDownpayment(costOfHouse) {
 	return downpayment;
 }
 
-console.log(calcDownpayment(40000));
-console.log(calcDownpayment(50000));
-console.log(calcDownpayment(100000));
-console.log(calcDownpayment(250000));
+// console.log(calcDownpayment(40000));
+// console.log(calcDownpayment(50000));
+// console.log(calcDownpayment(100000));
+// console.log(calcDownpayment(250000));

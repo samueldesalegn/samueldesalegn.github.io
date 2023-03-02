@@ -24,9 +24,9 @@ console.log("expect 6: ", computeSalesCommission(false, 300));
 console.log("expect 65: ", computeSalesCommission(true, 3500));
 console.log("expect 100: ", computeSalesCommission(false, 3500));
  */
+import assert from "node:assert/strict";
 
-
-function computeSalesCommission(salary, salesAmount) {
+export function computeSalesCommission(salary, salesAmount) {
 	let commission = 0;
 
 	if (salesAmount < 300) {
@@ -49,5 +49,23 @@ function computeSalesCommission(salary, salesAmount) {
 	return commission;
 }
 
-let commission = computeSalesCommission(false, 3500);
-console.log(commission);
+// describe("test of ComputSalesCommission", function(){
+// 	it("tests salaried and 200 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(true, 200), 0);
+// 	});
+// 	it("tests not salaried and 200 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(false, 200), 0);
+// 	});
+// 	it("tests salaried and 300 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(true, 300), 3);
+// 	});
+// 	it("tests not salaried and 300 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(false, 300), 6);
+// 	});
+// 	it("tests salaried and 3500 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(true, 3500), 65);
+// 	});
+// 	it("tests not salaried and 3500 sales", function(){
+// 	assert.strictEqual(computeSalesCommission(false, 3500), 100);
+// 	});
+//  });

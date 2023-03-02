@@ -20,7 +20,7 @@ return balanceOfSavingAccount
 
  */
 
-function compoundInterest(initialAmount, interestRate, numberOfYears) {
+export function compoundInterest(initialAmount, interestRate, numberOfYears) {
 	let balance = 0;
 	let computedInterest = 0;
 
@@ -30,13 +30,10 @@ function compoundInterest(initialAmount, interestRate, numberOfYears) {
 		
 	}
 	balance = initialAmount + computedInterest;
-	return balance.toFixed(2)
+	return +balance.toFixed(2)
 	
 	
 }
-
-console.log(compoundInterest(100, 10, 1));
-console.log(compoundInterest(10000, 5, 10));
 
 
 
