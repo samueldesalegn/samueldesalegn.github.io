@@ -4,15 +4,17 @@
 Comment these out when you send it to the browser with the index.html mocha setup page.
 */
 // import assert from "node:assert/strict"; 
+// import imports from "./fnExps.js";
 // const assert = require("assert");  //always need this with node
 import {double, times100, myMap, customMap } from "./fnExps.js";  //with node need the name of your file with your functions here
 // const double = imports.double;  //do this for all of the functions used in the Mocha tests
 // const myMap = imports.myMap;
 // const times100 = imports.times100;
+// const customMap = imports.customMap;
 
 
 /* the following comment is needed when you run in the browser environment */
-global assert double times100 myMap  
+// global assert double times100 myMap  
 
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {
