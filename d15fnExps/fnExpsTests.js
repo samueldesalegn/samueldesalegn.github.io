@@ -12,7 +12,7 @@ import {double, times100, myMap, customMap } from "./fnExps.js";  //with node ne
 
 
 /* the following comment is needed when you run in the browser environment */
-/* global assert double times100 myMap  */
+global assert double times100 myMap  
 
 /* 1.	1.	Write a function, double, that takes a number and returns 2 times the number..  */
 describe("double", function () {
