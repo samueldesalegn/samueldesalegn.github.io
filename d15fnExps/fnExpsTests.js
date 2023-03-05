@@ -4,7 +4,7 @@
 Comment these out when you send it to the browser with the index.html mocha setup page.
 */
 // Adding assert again
-import assert from "node:assert/strict"; 
+// import assert from "node:assert/strict"; 
 
 import {double, times100, myMap, customMap } from "./fnExps.js";  
 
