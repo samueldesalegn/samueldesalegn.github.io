@@ -33,9 +33,10 @@ export function myMap(arr, callback){
 }
 
 /**
+ * @params {num} the parameter takes a number as an input
 * @returns {num} 100 times the input
 */
-export const customMap = (number) => number*3;
+export const customMap = (num) => num*3;
 
 
 
