@@ -3,7 +3,7 @@
 /* You need the assert and function name declarations to test in node.  
 Comment these out when you send it to the browser with the index.html mocha setup page.
 */
-import assert from "node:assert/strict"; 
+// import assert from "node:assert/strict"; 
 
 import {double, times100, myMap, customMap } from "./fnExps.js";  
 
