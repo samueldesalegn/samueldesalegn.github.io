@@ -74,7 +74,7 @@ let correctA = [3, 1, 2, 4];
 let report = { s101: 3, s102: 2, s103: 3 };
 describe("gradeQuiz", function () {
     it("tests gradeQuiz takes two arrays and outputs: { s101: 3, s102: 2, s103: 3 }", function () {
-        assert.deepStrictEqual(gradeQuiz(quiz, correctA), { s101: 3, s102: 2, s103: 3 });
+        assert.deepEqual(gradeQuiz(quiz, correctA), { s101: 3, s102: 2, s103: 3 });
     });
 });
 

@@ -32,16 +32,16 @@
 // // console.log(y)
 
 
-// let library = [
-// 	{ title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
-// 	{ title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
-// 	{ title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
-// ];
-// // console.log(library[2].author);
+let library = [
+	{ title: "The Road Ahead", author: "Bill Gates", libraryID: 1254 },
+	{ title: "Walter Isaacson", author: "Steve Jobs", libraryID: 4264 },
+	{ title: "Mockingjay: The Final Book of The Hunger Games", author: "Suzanne Collins", libraryID: 3245 }
+];
+// console.log(library[2].author);
 
-// for (let i = 0; i < library.length; i++) {
-// 	console.log(library[i].author);
-// }
+for (let i = 0; i < library.length; i++) {
+	console.log(library[i].title);
+}
 
 
 // for (let i = 0; i < library.length; i++) {
