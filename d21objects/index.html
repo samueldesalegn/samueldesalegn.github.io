@@ -13,6 +13,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mocha/3.2.0/mocha.js"></script>
     <script>
         mocha.setup('bdd'); // minimal setup
+        mocha.checkLeaks();
+        // let assert = chai.assert;
     </script>
     <!-- add chai -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/chai/3.5.0/chai.js"></script>
@@ -26,8 +28,8 @@
 <body>
 
     <a target="_blank"  href="books.html">View book web app</a>
-    <script src="./libraryBooksTest.js" type="module"></script>
     <script src="./app.js" type="module"></script>
+    <script src="./libraryBooksTest.js" type="module"></script>
 
 
     <h2>Objects Lab</h2>
@@ -35,7 +37,7 @@
     <div id="mocha"></div>
 
     <!-- run tests! -->
-    <script type="module">
+    <script class="mocha-exec" type="module">
         mocha.run();
     </script>
 
