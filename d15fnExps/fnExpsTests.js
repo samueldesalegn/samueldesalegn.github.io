@@ -3,7 +3,7 @@
 /* You need the assert and function name declarations to test in node.  
 Comment these out when you send it to the browser with the index.html mocha setup page.
 */
-// import assert from "node:assert/strict"; 
+import assert from "node:assert/strict"; 
 
 import {double, times100, myMap, customMap } from "./fnExps.js";  
 
@@ -53,7 +53,7 @@ describe("times100", function () {
             assert.deepStrictEqual(myMap(testArray,  customMap), [-30, 0, 30, 60]);
         });
         it("tests myMap on triples arrow function", function () {
-            assert.deepStrictEqual(myMap(testArray, customMap), [-30, 0, 30, 60]);
+            assert.deepStrictEqual(myMap(testArray, (num) => num*3), [-30, 0, 30, 60]);
         });
     });
 
