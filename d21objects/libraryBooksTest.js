@@ -1,5 +1,5 @@
 /* comment out the import assert line when running in the browser */
-// import assert from "node:assert/strict"; 
+import assert from "node:assert/strict"; 
 
 
 import {findTitles, findAuthors , findIDs, createBook, individualScore, gradeQuiz, avgScore} from "./app.js";  //do this for all of the app.js functions used in the Mocha tests
