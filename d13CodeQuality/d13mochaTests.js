@@ -1,4 +1,4 @@
-import assert from "node:assert/strict";
+// import assert from "node:assert/strict";
 import { isVowel } from "./codesToTest.js";
 import { computeSalesCommission } from "../functionAssignment/computeSalesCommission.js";
 import { compoundInterest } from "../functionAssignment/compoundInterest.js";
