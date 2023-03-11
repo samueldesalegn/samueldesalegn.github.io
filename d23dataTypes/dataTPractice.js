@@ -194,19 +194,21 @@ const players = [player1, player2, player3];
 
 
 function sumPoints(players) {
+	// let total = players.reduce((accum, playerSum(players[curr.points])) => accum + );
 	let total = 0;
-	// let playerscore = players.points.map((a,b) => a + b);
 	for (const player of players) {
 		total += playerSum(player.points);
 	}
+
 	return total;
 }
 
 function playerSum(arr) {
-	let sum = 0;
-	for (const elem of arr) {
-		sum += elem;
-	}
+	let sum = arr.reduce((accum, curr) => accum + curr, 0);
+	// for (const elem of arr) {
+	// 	sum += elem;
+	// }
+
 	return sum;
 }
 
