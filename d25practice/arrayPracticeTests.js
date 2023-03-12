@@ -1,5 +1,5 @@
 /* comment out the import assert line when running in the browser */
-import assert from "node:assert/strict"; 
+// import assert from "node:assert/strict"; 
 
 import { doubleNums, doubleAges, filterEven, filterOver10, findEvenAge, findEvenNum } from "./arrayPractice.js";
 
@@ -60,6 +60,9 @@ describe("filter practice", function () {
     });
 
     /* complete the following similar to includes even test */
-    it("includes even age -- write this test");
+    it("includes even age", function (){
+        assert.deepEqual(doubleAges(peopleArray),
+            [{ name: "Sam", age: 30 }, { name: "William", age: 12 }, { name: "Lucy", age: 26 }, { name: "Barney", age: 160 }]);
+    });
 
 });

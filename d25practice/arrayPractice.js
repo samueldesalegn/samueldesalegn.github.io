@@ -5,8 +5,7 @@ export function doubleNums(arr){
 	}
 	
 	export function doubleAges(arr){
-		return arr.map(person => person.age*2)
-		
+		return arr.map(person =>{return { name: person.name, age: person.age*2}})
 		
 	}
 	
@@ -36,10 +35,15 @@ export function doubleNums(arr){
 		
 	}
 	
-	export function includesEvenAge(arr){
-
-
-	return arr.includes()
+export function includesEvenAge(arr){
+			
+	for (const num of arr) {
+		if (num.age%2 === 0) {
+			return true;
+		}
+		
+	}
+	return false;
 	}
 	
 	

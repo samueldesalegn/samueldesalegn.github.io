@@ -305,33 +305,33 @@ function playerSum(arr) {
 // console.log("expect 1.667: ", quiz.getAverageScore());
 
 
-const quiz = {
-  students: [
-    { sid: 10, answers: [ { qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" } ] },
-    { sid: 11, answers: [ { qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" } ] },
-    { sid: 12, answers: [ { qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" } ] }
-  ],
-  key: [
-    { qid: 1, ans: "b" },
-    { qid: 2, ans: "a" },
-    { qid: 3, ans: "b" }
-  ],
-  answerComparator: function(ans1, ans2) {
-    return ans1.qid - ans2.qid;
-  },
-  scoreStudent: function(sid) {
-    const student = this.students.find(student => student.sid === sid);
-    if (!student) return 0;
-    const score = student.answers.reduce((acc, curr) => {
-      const keyA = this.key.find(key => key.qid === curr.qid);
-      if (keyA && keyA.ans === curr.ans) {
-        return acc + 1;
-      } else {
-        return acc;
-      }
-    }, 0);
-    return score;
-  },
+// const quiz = {
+//   students: [
+//     { sid: 10, answers: [ { qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" } ] },
+//     { sid: 11, answers: [ { qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" } ] },
+//     { sid: 12, answers: [ { qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" } ] }
+//   ],
+//   key: [
+//     { qid: 1, ans: "b" },
+//     { qid: 2, ans: "a" },
+//     { qid: 3, ans: "b" }
+//   ],
+//   answerComparator: function(ans1, ans2) {
+//     return ans1.qid - ans2.qid;
+//   },
+//   scoreStudent: function(sid) {
+//     const student = this.students.find(student => student.sid === sid);
+//     if (!student) return 0;
+//     const score = student.answers.reduce((acc, curr) => {
+//       const keyA = this.key.find(key => key.qid === curr.qid);
+//       if (keyA && keyA.ans === curr.ans) {
+//         return acc + 1;
+//       } else {
+//         return acc;
+//       }
+//     }, 0);
+//     return score;
+//   },
   getAverageScore: function() {
     const totalScore = this.students.reduce((acc, stud) => {
       return acc + this.scoreStudent(stud.sid);
@@ -339,24 +339,162 @@ const quiz = {
     const averageScore = totalScore / this.students.length;
     return +averageScore.toFixed(3);
   }
-};
+// };
 
-console.log("expect 1: ", quiz.scoreStudent(10));
-console.log("expect 2: ", quiz.scoreStudent(11));
-console.log("expect 2: ", quiz.scoreStudent(12));
-console.log("expect 1.667: ", quiz.getAverageScore());
+// console.log("expect 1: ", quiz.scoreStudent(10));
+// console.log("expect 2: ", quiz.scoreStudent(11));
+// console.log("expect 2: ", quiz.scoreStudent(12));
+// console.log("expect 1.667: ", quiz.getAverageScore());
 
 
-function vowelCount(str) {
-  str = str.toLowerCase();
-  let count = {a:0, e:0, i: 0, o: 0, u: 0};
-  const vowels = ['a', 'e', 'i', 'o', 'u'];
-  for (const char of str) {
-    if (vowels.includes(char)) {
-      count[char]++;
+// function vowelCount(str) {
+//   str = str.toLowerCase();
+//   let count = {a:0, e:0, i: 0, o: 0, u: 0};
+//   const vowels = ['a', 'e', 'i', 'o', 'u'];
+//   for (const char of str) {
+//     if (vowels.includes(char)) {
+//       count[char]++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(vowelCount("what a night for us"));
+
+
+// ["Bilbo", "Gandalf", "Nazgul"].forEach((item, index, array) => {
+//   console.log (`${item} is at index ${index} in [${array}]`);
+//   });
+
+
+const bob = {name: "bob", age: 10, weight: 95};
+const ned = {name: "ned", age: 20, weight: 105};
+const sue = {name: "sue", age: 30, weight: 125};
+const people = [ned, bob, sue];
+// console.log( people.sort(oldest));
+// Write the code for the oldest comparator so the console log prints out the objects ordered 
+// according to the age of the people in descending order.
+
+// people.sort(people.age )
+
+// console.log(people.sort( ( a, b) => b.age - a.age ));
+// console.log(people)
+
+// let gosto = goStop(100, ()=> "go!", () => "stop!"); //gosto === "go!"
+// gosto = goStop(0, ()=> "go!", () => "stop!"); //gosto === "stop!"
+// gosto = goStop(-100, ()=> "go!", () => "stop!"); //gosto === "go!"
+// gosto = goStop(true, ()=> "go!", () => "stop!"); //gosto === "go!"
+// gosto = goStop(false, ()=> "go!", () => "stop!"); //gosto === "stop!"
+
+// console.log(gosto());
+
+// function goStop(flag, go, stop){
+// //implement this function so the call above work as indicated
+// if (flag) go()
+// else stop();
+// }
+// function permission() {
+// console.log("go!");
+// }
+// function denial() {
+// console.log("stop!");
+
+// }
+
+// console.log(goStop(false, permission, denial));
+
+
+
+const donation1 = { fund: 1, amount: 100 };
+const donation2 = { fund: 2, amount: 10 };
+const donation3 = { fund: 3, amount: 1 };
+const donation4 = { fund: 4, amount: 5 };
+const donation5 = { fund: 5, amount: 15 };
+const day1 = { donations: [donation1, donation2], date: "01/10/2022" };
+const day2 = { dontations: [donation3, donation4, donation5], date: "01/10/2022" };
+const dailyrecord = [day1, day2];
+//find the dailytotal
+
+// function dailyTotal(donations) {
+//   let dailyTot = 0;
+  
+//   for (let i = 0; i < donations.length; i++) {
+//      dailyTot += day1.donations[i].amount;
+//   }
+//   return dailyTot;
+
+// }
+
+// console.log(dailyTotal(day2.donations));
+
+// // console.log(dailytotal); // Output: 131
+// const dailyTot = dailyrecord.reduce((acc, { donations }) => {
+//     return acc + donations.reduce((donationAccum, { amount }) => {
+//         return donationAccum + amount;
+//     }, 0);
+// }, 0);
+
+
+function averageDonation() {
+  let dailyTotal = 0;
+  for (let i = 0; i < dailyrecord.length; i++) {
+    const donations = dailyrecord[i].donations;
+    for (let j = 0; j < donations.length; j++) {
+    dailytotal += donations[j].amount;
     }
-  }
-  return count;
+    }
+   
+  const averageScore = dailyTotal / this.students.length;
+  return +averageScore.toFixed(2);
 }
 
-console.log(vowelCount("what a night for us"));
+
+// function dailyTotal(dailyRecord) {
+//   let dailyTotal = 0;
+//   for (let i = 0; i < dailyrecord.length; i++) {
+//     const donations = dailyrecord[i].donations;
+//     for (let j = 0; j < donations.length; j++) {
+//         dailytotal += donations[j].amount;
+//     }
+//   }
+//   return dailyTotal;
+// }
+
+// function dailyTotal(dailyRecord) {
+//   let dailyTotal = 0;
+//   for (const donation of dailyrecord) {
+//     for (const donate of donation) {
+//         dailyTotal += dailyrecord[donation].donate.amount;
+//     }
+//   }
+//   return dailyTotal;
+// }
+
+/**
+ * 
+ * @param {takes the big array} dailyRecord 
+ * @returns return the largest donation and date 
+ * 
+ * Steps: 
+ * 1. The functions initializes the max to zero, and date to an empty string
+ * 2. loops through the outer array dailyRecods
+ * 3. loops through inner/nested loop
+ * computes max and the respective date
+ * 
+ */
+function findBigDonations(dailyRecord) {
+  let max = 0;
+  for (const donation of dailyrecord) {
+    for (const donate of donation) {
+      if (max < dailyrecord[donation].donate.amount) {
+        max = dailyrecord[donation].donate.amount;
+      }
+        
+    }
+  }
+  return max;
+}
+
+
+
+  

@@ -25,8 +25,21 @@ function answerComparator(ans1, ans2) {
  * compare them against key and add up matches
  */
 quiz.scoreStudent = function (sid) {
+
 //IMPLEMENT THIS
-};
+const student = this.students.find(student => student.sid === sid);
+if (!student) return 0;
+const score = student.answers.reduce((acc, curr) => {
+	const keyA = this.key.find(key => key.qid === curr.qid);
+	if (keyA && keyA.ans === curr.ans) {
+		return acc + 1;
+	} else {
+		return acc;
+	}
+}, 0);
+return score;
+},
+
 
 /**
  * @returns {number} average score of all students
@@ -34,6 +47,12 @@ quiz.scoreStudent = function (sid) {
  */
 quiz.getAverage = function(){
 //IMPLEMENT THIS
-
+const totalScore = this.students.reduce((acc, stud) => {
+	return acc + this.scoreStudent(stud.sid);
+}, 0);
+const averageScore = totalScore / this.students.length;
+return +averageScore.toFixed(3);
 };
+
+
 
