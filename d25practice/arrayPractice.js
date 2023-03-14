@@ -36,7 +36,6 @@ export function doubleNums(arr){
 	}
 	
 export function includesEvenAge(arr){
-			
 	for (const num of arr) {
 		if (num.age%2 === 0) {
 			return true;
