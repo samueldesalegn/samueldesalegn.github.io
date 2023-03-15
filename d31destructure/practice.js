@@ -610,19 +610,19 @@ friends: [0,1,2,3]
 // Below, makeCounter creates the “counter” function that 
 // returns the next number on each invocation:
 
-function makeCounter() {
-  let count = 0;
+// function makeCounter() {
+//   let count = 0;
 
-  return function() {
-    return count++;
-  };
-}
+//   return function() {
+//     return count++;
+//   };
+// }
 
-let counter = makeCounter();
+// let counter = makeCounter();
 
-console.log( counter() ); // 0
-console.log( counter() ); // 1
-console.log( counter() ); // 2
+// console.log( counter() ); // 0
+// console.log( counter() ); // 1
+// console.log( counter() ); // 2
 // // Despite being simple, slightly modified variants of that code have practical uses, 
 // // for instance, as a random number generator to generate random values for automated tests.
 
@@ -901,21 +901,102 @@ console.log( counter() ); // 2
 
 // That is not a bug in the debugger, but rather a special feature of V8. 
 // Perhaps it will be changed sometime. You can always check for it by running the examples 
-// on this page.
+// // on this page.
 
-// function a() {
-// 	console.log(x); // consult
-// 	// Global for x and print 20 from Global
-// 	}
-// 	function b() {
-// 	const x = 10;
-// 	a(); // consult Global for a
+// // function a() {
+// // 	console.log(x); // consult
+// // 	// Global for x and print 20 from Global
+// // 	}
+// // 	function b() {
+// // 	const x = 10;
+// // 	a(); // consult Global for a
+// // }
+// // const x = 20;
+// // b();
+
+// // {
+// // 	let message = "Hello";
+// // 	console.log(message);
+// // }
+
+// function makeWorker() {
+//   let name = "John";
+//   return function() {
+//   console.log(name);
+//   };
 // }
-// const x = 20;
-// b();
 
-{
-	let message = "Hello";
-	console.log(message);
-}
-	
+// let name = "Pete";
+// // create a function
+// let work = makeWorker();
+// // call it
+// work(); // what will it show? “John" (name where created) or “Pete" (name where called)? //Joh, right?
+
+
+// function log() {
+//   console.log("No Arguments");
+//   }
+//   function log(x) {
+//   console.log("1 Argument: " + x);
+//   }
+//   function log(x, y) {
+//   console.log("2 Arguments: " + x + ", " + y);
+//   }
+// // log();  
+
+// // Write a function, flatten, that returns an array that has objects of the form {date: "...", id: 1, amt: 15} for all donations.
+// // flatten(dailyRecord) returns: [
+// // { date: '01/10/2022', id: 1, amount: 100 },
+// // { date: '01/10/2022', id: 2, amount: 10 },
+// // { date: '01/11/2022', id: 3, amount: 1 },
+// // { date: '01/11/2022', id: 2, amount: 5 },
+// // { date: '01/11/2022', id: 1, amount: 15 }
+// // ]
+
+// const donation1 = { funderId: 1, amount: 100 };
+// const donation2 = { funderId: 2, amount: 10 };
+// const donation3 = { funderId: 3, amount: 1 };
+// const donation4 = { funderId: 2, amount: 5 };
+// const donation5 = { funderId: 1, amount: 15 };
+// const day1 = { donations: [donation1, donation2], date: "01/10/2022", };
+// const day2 = { donations: [donation3, donation4, donation5], date: "01/11/2022", };
+
+// const dailyRecord = [day1, day2];
+// /**
+//  * 
+//  * @param {*} dailyRecord 
+//  * @returns 
+//  */
+// function flatten(dailyRecord){
+//   let flattened = [];
+//   for (const day of dailyRecord) {
+//     for (const funder of day.donations) {
+//         flattened.push({date: day.date, id: funder.funderId, amount: funder.amount}); 
+        
+      
+//     }
+    
+//   }
+//   return flattened;
+// }
+
+// console.log(flatten(dailyRecord));
+
+// Write your own version of Array.map. Write a function, myMap(arr, fun) that takes an array and a function as arguments and returns a new array that is
+//  formed by applying the function to each element of the array and saving the result in the new array?
+
+// function myMap(arr, fun) {
+//   let newArr = [];
+//   for (const elem of arr) {
+//     newArr.push(fun(elem))
+//   }
+//   return newArr;
+// }
+
+// Write a function, smash, that uses map and destructuring in parameters of the callback function. 
+// Remember that you need () around destructuring brackets for an object if you do not have let or const.  
+// smash input is an array of objects with x and y properties. 
+//  It returns an array that has the x and y values added together.
+
+// const bar = [{x:1, y:2}, {x:10, y:4}, {x:4, y:2}]
+// console.log("expect [3, 14, 6]:", smash(bar));
