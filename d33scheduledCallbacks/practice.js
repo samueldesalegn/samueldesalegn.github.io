@@ -300,27 +300,34 @@
 // }, 100);
 
 
-/**
- * 
- * @param {*} teamStats 
- * @returns 
- */
-export function findTotalScores(teamStats) {
-	let playerStat = [];
-  for (const player of teamStats) {
-		let playerTotal = 0;
-    for (const stat of player.stats) {
-			playerTotal += stat.points;
+// /**
+//  * 
+//  * @param {*} teamStats 
+//  * @returns 
+//  */
+// export function findTotalScores(teamStats) {
+// 	let playerStat = [];
+//   for (const player of teamStats) {
+// 		let playerTotal = 0;
+//     for (const stat of player.stats) {
+// 			playerTotal += stat.points;
          
-    }
-		playerStat.push({jersey: player.jersey, total: playerTotal});
-  }
-  return playerStat;
-}
+//     }
+// 		playerStat.push({jersey: player.jersey, total: playerTotal});
+//   }
+//   return playerStat;
+// }
 
-const player1 = { jersey: 8, stats: [{ game: 1, points: 6 }, { game: 2, points: 7 }] };
-const player2 = { jersey: 12, stats: [{ game: 1, points: 16 }, { game: 2, points: 14 }] };
-const player3 = { jersey: 6, stats: [{ game: 1, points: 10 }, { game: 2, points: 6 }] };
-const teamStats = [player1, player2, player3];
+// const player1 = { jersey: 8, stats: [{ game: 1, points: 6 }, { game: 2, points: 7 }] };
+// const player2 = { jersey: 12, stats: [{ game: 1, points: 16 }, { game: 2, points: 14 }] };
+// const player3 = { jersey: 6, stats: [{ game: 1, points: 10 }, { game: 2, points: 6 }] };
+// const teamStats = [player1, player2, player3];
 
-console.log(findTotalScores(teamStats));
+// console.log(findTotalScores(teamStats));
+
+
+// let timerId = setInterval(() => console.log('tick'), 2000);
+// // after 5 seconds stop
+// setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 5000);
+
+setTimeout(sayHi(), 3000); function sayHi(){console.log('hello');}
