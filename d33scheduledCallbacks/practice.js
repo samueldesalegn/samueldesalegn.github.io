@@ -330,4 +330,4 @@
 // // after 5 seconds stop
 // setTimeout(() => { clearInterval(timerId); console.log('stop'); }, 5000);
 
-setTimeout(sayHi(), 3000); function sayHi(){console.log('hello');}
+// setTimeout(sayHi(), 3000); function sayHi(){console.log('hello');}

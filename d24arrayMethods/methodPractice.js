@@ -268,9 +268,9 @@
 // // 	],
 // // 	key: [{qid: 1, ans: "b"}, {qid: 2, ans: "a"}, {qid: 3, ans: "b"}],
 
-// // 	answerComparator: function(ans1, ans2) {
-// // 		return ans1.qid - ans2.qid;
-// // 	},
+	answerComparator: function(ans1, ans2) {
+		return ans1.qid - ans2.qid;
+	},
 // // 	scoreStudent: (sid) => {
 // // 		let student = this.students.find(student => student.sid === sid);
 // // 		// console.log(student);

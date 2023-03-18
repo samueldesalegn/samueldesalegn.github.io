@@ -223,3 +223,53 @@
 // foo(); //undefined
 // bob.log();//log() is called by the object, bob 
 
+// let john = { name: "John", surname: "Smith", age: 10 };
+// let pete = { name: "Pete", surname: "Hunt", age: 20 };
+// let people = [ john, pete];
+
+
+
+// // Model Short Answer:
+// let usersMapped = people.map(person=> ({
+// fullName: `${person.name} ${person.surname}`,
+// age: person.age
+// }));
+
+// console.log(usersMapped);
+// //OR
+
+// const mapped = people.map(function(person) {
+// const newPersonObj = {
+// fullName: person.name + " " + person.surname,
+// age: person.age
+// };
+// return newPersonObj ;
+// });
+
+// "use strict";
+// function a() {
+// console.log(this);}
+// const b = {
+// dog: 'fido',
+// log: function() {
+// console.log(this); }}
+// console.log("1 " + this);
+// a();
+// b.log();
+// let mylog = b.log;
+// mylog();
+
+let user = {
+	firstName: "John",
+	sayHi() {
+	console.log(`Hello, ${this.firstName}!`);
+	}};
+	setTimeout(function() { user.sayHi(); }, 1000); //wrapped versus just “user.sayHi”
+	//Or
+	setTimeout(() => user.sayHi(), 1000);
+	
+
+
+
+
+

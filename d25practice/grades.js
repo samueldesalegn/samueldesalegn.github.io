@@ -14,6 +14,7 @@ quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
  */
 function answerComparator(ans1, ans2) {
 //IMPLEMENT THIS
+	return ans1.qid - ans2.qid;
 }
 
 /**
@@ -31,12 +32,8 @@ const student = this.students.find(student => student.sid === sid);
 if (!student) return 0;
 const score = student.answers.reduce((acc, curr) => {
 	const keyA = this.key.find(key => key.qid === curr.qid);
-	if (keyA && keyA.ans === curr.ans) {
-		return acc + 1;
-	} else {
-		return acc;
-	}
-}, 0);
+	return (keyA && keyA.ans === curr.ans)? acc + 1: acc;
+  }, 0);
 return score;
 },
 
