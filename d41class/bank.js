@@ -47,8 +47,8 @@ export class Bank{
 	}
 
 	closeAccount(number) {
-				
-		delete this._accounts[number];
+			
+		this._accounts.splice(number, 1);
 		return null;
 
 	}
