@@ -41,6 +41,9 @@ export class SavingsAccount extends Account{
 		this._balance += (this._balance * (this._interest/100));
 	}
 
+	getBalance() {
+			return this._balance;
+	}
 	/**
 	 * @returns {string} representation of this account
 	 */

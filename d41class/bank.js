@@ -11,7 +11,7 @@ export class Bank{
 		this._accounts = [];
 	}
 
-	// static nextNumber ;
+	
 
 	/**
      * create a new plain account object and add it to the bank._accounts array

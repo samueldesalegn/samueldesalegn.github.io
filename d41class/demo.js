@@ -137,24 +137,81 @@
 // rabbit.run(5); // White Rabbit runs with speed 5.
 // rabbit.hide(); // White Rabbit hides
 
-/**
- * 
- * @param {*} name 
- */
-function Rabbit(name) {
-  this.name = name;
-}
-Rabbit.prototype.sayHi = function() {
-  console.log(this.name);
-};
-let fluf1= new Rabbit("Fluffy");
+// /**
+//  * 
+//  * @param {*} name 
+//  */
+// function Rabbit(name) {
+//   this.name = name;
+// }
+// Rabbit.prototype.sayHi = function() {
+//   console.log(this.name);
+// };
+// let fluf1= new Rabbit("Fluffy");
 
  
 
-// Do all of these calls do the same thing? 
-// (Draw the object diagram - on scratch paper)
+// // Do all of these calls do the same thing? 
+// // (Draw the object diagram - on scratch paper)
 
-fluf1.sayHi();
-Rabbit.prototype.sayHi();
-fluf1.__proto__.sayHi();
+// fluf1.sayHi();
+// Rabbit.prototype.sayHi();
+// fluf1.__proto__.sayHi();
 
+// import assert from "node:assert/strict"; 
+// import { executor, add, mul } from "./exam.js";
+
+// describe("executor", function(){
+//   it ("tests add", function(){
+//   assert.strictEqual(executor(add, 5, 10), 15);
+//   });
+//   it("tests mul", function(){
+//   assert.strictEqual(executor(mul, 5, 10), 50);
+//   });
+//   });
+
+
+
+export const quiz = {};
+quiz.students = [{ sid: 10, answers: [{ qid: 2, ans: "b" }, { qid: 3, ans: "a" }, { qid: 1, ans: "b" }] },
+{ sid: 11, answers: [{ qid: 1, ans: "e" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }] },
+{ sid: 12, answers: [{ qid: 3, ans: "b" }, { qid: 2, ans: "a" }, { qid: 1, ans: "d" }] }];
+quiz.key = [{ qid: 1, ans: "b" }, { qid: 2, ans: "a" }, { qid: 3, ans: "b" }];
+
+quiz.ansComparator = function (ans1, ans2) {
+  return ans1.qid - ans2.qid;
+}
+
+quiz.studentscore = function(sid) {
+  // let studAns = [];
+  const student = quiz.students.find(stu => stu.sid === sid);
+  // console.log(student.answers);
+  student.answers.sort(quiz.ansComparator);
+     
+  const score = helper(student.answers, quiz.key);
+  return score;
+    
+  
+  // return studAns;
+}
+
+// console.log(quiz.studentscore(10));
+
+// function helper(answers, key) {
+//   let score = 0;
+//   for (let i = 0; i < answers.length; i++) {
+//     if (answers[i].ans === key[i].ans) {
+//       score++;
+//     } 
+//   }
+//   return score;
+// }
+
+
+let sayHi = (phrase, who) => console.log(phrase + ', ' + who);
+
+
+setTimeout(sayHi, 1000, "Hello", "John"); // Hello, John
+
+
+// setTimeout(() => console.log('Hello'), 1000);
